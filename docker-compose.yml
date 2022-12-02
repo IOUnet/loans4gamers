@@ -32,5 +32,7 @@ services:
     image: postgres:10
     environment:
       POSTGRES_PASSWORD: example
+    volumes:
+      - ./db:/db
     restart: always
 
