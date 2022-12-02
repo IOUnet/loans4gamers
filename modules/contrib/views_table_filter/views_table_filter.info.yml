@@ -1,0 +1,13 @@
+type: module
+name: 'Views Table Filter'
+description: 'Moves views exposed filters in table header.'
+package: Views
+dependencies:
+  - drupal:views
+  - drupal:better_exposed_filters
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2021-09-22
+version: '2.0.1'
+project: 'views_table_filter'
+datestamp: 1632296433

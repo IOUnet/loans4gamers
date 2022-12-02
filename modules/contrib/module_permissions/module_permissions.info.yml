@@ -1,0 +1,10 @@
+name: 'Module Permissions'
+type: module
+description: 'Protects a site with the managed allow/disallow list of modules, permissions and paths.'
+core_version_requirement: ^9 || ^10
+package: 'Administration'
+
+# Information added by Drupal.org packaging script on 2022-10-31
+version: '3.2.0'
+project: 'module_permissions'
+datestamp: 1667195151
