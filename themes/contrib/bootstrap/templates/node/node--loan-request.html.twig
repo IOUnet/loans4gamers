@@ -87,13 +87,15 @@
   {{ title_suffix }}
 
   <div{{ content_attributes.addClass('content') }}>
-    <p>{{ 'Loan amount:'|t }} {{ content.field_loan_amount.0 }}</p>
-    <p>{{ 'Loan Period:'|t }} {{ content.field_loan_period.0 }}</p>
-    <p>{{ 'Interest Rate:'|t }} {{ content.field_interest_rate.0 }}</p>
-    <p>{{ 'IOU address:'|t }} {{ content.field_iou_address.0 }}</p>
+    <p>{{ 'Loan amount ($):'|t }} {{ content.field_loan_amount.0 }}</p>
+    <p>{{ 'Loan Period (month):'|t }} {{ content.field_loan_period.0 }}</p>
+    <p>{{ 'Interest Rate (%):'|t }} {{ content.field_interest_rate.0 }}</p>
+    
     {{ content.field_tag }}
+    <p>{{ 'IOU address:'|t }} {{ content.body }}</p>
+    
     {% if content.field_iou_url.0 is not empty %}
-      <a href="{{ content.field_iou_url.0['#url'] }}" target="_blank" class="btn btn-primary">BUTTON</a>
+      <a href="{{ content.field_iou_url.0['#url'] }}" target="_blank" class="btn btn-primary">{{'Get this offer'|t}} </a>
     {% endif %}
   </div>
 

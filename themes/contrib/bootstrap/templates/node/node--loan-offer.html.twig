@@ -87,12 +87,15 @@
   {{ title_suffix }}
 
   <div{{ content_attributes.addClass('content') }}>
-    <p>{{ 'Loan amount from'|t }} {{ content.field_loan_amount_from.0 }} {{ 'to'|t }} {{ content.field_loan_amount_to.0 }}</p>
-    <p>{{ 'Loan period from'|t }} {{ content.field_loan_period_from_mnth.0 }} {{ 'to'|t }} {{ content.field_loan_period_to_mnth.0 }}</p>
-    <p>{{ 'Loan interest from'|t }} {{ content.field_loan_interest_from.0 }} {{ 'to'|t }} {{ content.field_loan_interest_to.0 }}</p>
+    <p>{{ 'Loan amount ($) from'|t }} {{ content.field_loan_amount_from.0 }} {{ 'to'|t }} {{ content.field_loan_amount_to.0 }}</p>
+    <p>{{ 'Loan period (month) from'|t }} {{ content.field_loan_period_from_mnth.0 }} {{ 'to'|t }} {{ content.field_loan_period_to_mnth.0 }}</p>
+    <p>{{ 'Loan interest (%) from'|t }} {{ content.field_loan_interest_from.0 }} {{ 'to'|t }} {{ content.field_loan_interest_to.0 }}</p>
+
     {{ content.field_tag }}
+    
+
     {% if content.field_iou_url.0 is not empty %}
-      <a href="{{ content.field_iou_url.0['#url'] }}" target="_blank" class="btn btn-primary">BUTTON</a>
+      <a href="{{ content.field_iou_url.0['#url'] }}" target="_blank" class="btn btn-primary">{{'Get this offer'|t}}</a>
     {% endif %}
   </div>
 
